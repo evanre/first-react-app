@@ -9,6 +9,8 @@ import Header from './components/Header';
 import Menu from './components/Menu';
 import Main from './components/Main';
 
+const backgroundUrl = process.env.PUBLIC_URL + '/img/bg.jpg';
+
 const HeaderWrapper = styled.header`
     width: 100%;
     height: 50px;
@@ -19,6 +21,13 @@ const HeaderWrapper = styled.header`
 const MenuWrapper = styled.div`
     height: 90px;
     padding: 20px 0;
+`;
+
+const MainWrapper = styled.main`
+    padding: 130px 0;
+    background-image: url(${backgroundUrl});
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
 class App extends Component {
@@ -35,7 +44,11 @@ class App extends Component {
                     <Menu />
                 </Grid>
             </MenuWrapper>
-            <Main />
+            <MainWrapper>
+                <Grid>
+                    <Main />
+                </Grid>
+            </MainWrapper>
         </div>
     );
   }
