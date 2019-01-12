@@ -22,6 +22,16 @@ const Li = styled.li`
     }
 `;
 
+const menuItems = [
+    'Вызов мастера',
+    'Прайс на ремонт',
+    'Наши преимущества',
+    'Схема работы',
+    'Отзывы клиентов',
+    'Примеры работ',
+    'Контакты'
+];
+
 export default class Header extends Component {
     render() {
         return (
@@ -29,13 +39,9 @@ export default class Header extends Component {
                 <Col lg={12}>
                     <nav>
                         <Ul>
-                            <Li><Link link="#" text="Вызов мастера"/></Li>
-                            <Li><Link link="#" text="Прайс на ремонт"/></Li>
-                            <Li><Link link="#" text="Наши преимущества"/></Li>
-                            <Li><Link link="#" text="Схема работы"/></Li>
-                            <Li><Link link="#" text="Отзывы клиентов"/></Li>
-                            <Li><Link link="#" text="Примеры работ"/></Li>
-                            <Li><Link link="#" text="Контакты"/></Li>
+                            {menuItems.map((item, i) => (
+                                <Li key={i.toString()}><Link link="#" text={item}/></Li>
+                            ))}
                         </Ul>
                     </nav>
                 </Col>
