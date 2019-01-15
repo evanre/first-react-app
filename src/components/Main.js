@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import Slider from './Slider'
+
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import styled from 'styled-components';
@@ -58,7 +60,9 @@ export default class Main extends Component {
                         Отправить заявку!
                     </CallBtn>
                 </Col>
-                <Col lg={6}>Slider</Col>
+                <Col lg={6}>
+                    <Slider />
+                </Col>
             </Row>
         )
     }
